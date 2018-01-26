@@ -1,10 +1,15 @@
-
-
-//instructions for 1-19
-//
-//intro: Write a program that asks a user for how old they are, and then repeats that number back to them in an insult.
-//
-//intermediate: Write a program that prints the numbers 256 down to 32, counting by fours
-//
-//advanced: make an account at HackerRank.com
-//do this problem: https://www.hackerrank.com/challenges/c-tutorial-struct/problem
+#include <allegro5/allegro.h>
+#include <stdio.h>
+#include <time.h>
+#include <Windows.h>
+int main() {
+	srand(time(NULL));
+	al_init();
+	ALLEGRO_DISPLAY*gamewindow = al_create_display(600, 600);
+	while (1) {
+		al_clear_to_color(al_map_rgb(rand(), rand(), rand()));
+		al_flip_display();
+		system("Pause");
+		system("cls");
+	}
+}
